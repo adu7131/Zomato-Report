@@ -1,0 +1,30 @@
+1,CityPride,,Kothrud,9223344221,"Indian, Chinese, North Indian, South Indian",,300,Yes,No,Both,4,40
+2,Divine,Non-Veg,KoregaonPark,9322445555,Biryani,40,290,No,Yes,Online,2.5,35
+3,Tiranga,Veg & Non-Veg,Kothrud,8513445456,"Chinese,Indian,Biryani,North Indian",54,350,Yes,Yes,Both,4.9,50
+4,Delhi Kitchen,Veg & Non-Veg,Aundh,8165661215,North Indian,51,280,No,Yes,Both,3,48
+5,Marriott,Non-Veg,SBRoad,9933442211,"Indian, Chinese, North Indian, South Indian",45,,Yes,No,Offline,3,45
+6,Vaishali Hotel,Veg,FC Road,9786461456,South Indian,64,300,Yes,Yes,Both,4.8,60
+7,Regency Hotel,Veg,Baner,9234556622,"Chinese,Indian,Biryani,North Indian",60,350,No,,Both,5,58
+8,Mandarin Oriental,Veg,Karvenagar,9433225511,"Chinese,Indian,Biryani,North Indian",48,280,Yes,Yes,Offline,4,47
+9,Four Seasons Hotel,Non-Veg,Deccan,9566333241,North Indian,47,250,,Yes,Online,3.1,47
+10,Rancho Casino,Veg,Vimannagar,9877664532,Chinese,43,300,Yes,No,Online,4,40
+11,Clarion Hotel and Casino,Non-Veg,Katraj,9654324677,"Indian, Chinese, North Indian, South Indian",65,350,No,Yes,Both,4.9,64
+12,Natraj,Veg & Non-Veg,,5578754655,"Chinese,Indian,Biryani,North Indian",45,300,Yes,Yes,Both,3.5,44
+13,Continental Hotel and Casino,Non-Veg,Hadapsar,9543245677,"Chinese,Indian,Biryani,North Indian",58,340,No,Yes,Both,4,57
+14,Ritz Plaza Hotel,Non-Veg,Wakad,9545362253,"Indian, Chinese, North Indian, South Indian",56,280,Yes,Yes,Offline,4,55
+15,Nisarg,Non-Veg,Erandwane,8451645423,"Chinese,Indian,Biryani,North Indian",59,380,Yes,Yes,Both,4,55
+16,W Hotel,Veg,Kondhwa,9435662245,North Indian,35,300,No,Yes,Online,3,25
+17,Atmosphere 6,Veg & Non-Veg,Vimannagar,4484464755,Biryani,70,450,Yes,Yes,Both,5,70
+18,St Regis Hotels,Veg & Non-Veg,Kothrud,8437463733,"Fast Food, Chinese, Beverages",25,300,Yes,No,Offline,1,23
+19,Hyatt,Veg & Non-Veg,Kalyani nagar,7746464748,"Indian, Chinese, North Indian, South Indian",70,400,Yes,Yes,Both,4,65
+20,1000 Oaks,Veg & Non-Veg,Camp,9884687586,Biryani,60,300,No,Yes,Online,4.5,58
+21,Belmond,Veg,Aundh,8474738992,Chinese,30,250,No,Yes,Offline,2,28
+22,Rosewood Hotels & Resorts,Non-Veg,Warje,8337828282,"Chinese,Indian,Biryani,North Indian",45,290,Yes,No,Both,3,43
+23,Ritz-Carlton Hotel,Veg,PuneCity,8399292838,"Indian, Chinese, North Indian, South Indian",31,280,No,Yes,Offline,2.9,30
+24,Kokani,Veg & Non-Veg,Kothrud,7378929289,"Chinese,Indian,Biryani,North Indian",55,300,No,Yes,Both,3.9,55
+25,The Peninsula Chicago,Veg,ShivajiNagar,8373373833,"Indian, Chinese, North Indian, South Indian",39,320,Yes,No,Online,4,38
+26,Fort Harrison Hotel,Non-Veg,Kharadi,7373782828,Biryani,23,250,Yes,Yes,Both,2,20
+27,Kondares,Veg & Non-Veg,Hinjawadi,7373882828,"Indian, Chinese, North Indian, South Indian",69,400,No,Yes,Both,5,65
+28,Shabree,Veg,ShivajiNagar,4949845649,"Chinese,Indian,Biryani,North Indian",40,250,Yes,Yes,Both,3.8,40
+29,EatClub,Veg & Non-Veg,Mahalunge,6464654966,"Fast Food, Chinese, Beverages",43,260,No,Yes,Online,3.9,43
+30,Coriender Kitchen,Veg & Non-Veg,Sangamvadi,5964464984,"Chinese,Indian,Biryani,North Indian",50,300,Yes,Yes,Both,4.9,49

@@ -1,0 +1,163 @@
+                                                      #Foods DATABASE Query and its insertion of Tables
+                                                                    (Table Restaurant)
+
+create database foods;
+
+use foods;
+
+create table Restaurant( Restaurant_ID int PRIMARY KEY, 
+			Restaurant_Name char(50), 
+			Restaurant_Adress varchar(20), 
+			Restaurant_Type char(20));
+
+select *from restaurant;
+
+desc restaurant;
+
+insert into restaurant values( 101, 'CityPride', 'Pune', 'Veg'), ( 102, 'Divine', 'Pune', 'Non-Veg'), ( 103, 'Marriott', 'Pune', 'Non-Veg'), ( 104, 'Regency Hotel', 'Pune', 'Veg'), (105, 'Mandarin Oriental', 'Mumbai', 'Veg'), ( 106, 'Four Seasons Hotel', 'Dharashiv', 'Non-Veg'), ( 107, 'El Rancho Casino', 'Nashik', 'Veg' ), ( 108, 'Clarion Hotel and Casino', 'Nagpur', 'Non-Veg' ), ( 109, 'Continental Hotel and Casino', 'Noida', 'Non-Veg' ),( 110, 'Ritz Plaza Hotel', 'Lajpatt Nagar', 'Non-Veg'), ( 111, 'W Hotel', 'Mahabaleshwar', 'Veg' ),( 112, 'St Regis Hotels', 'Lonavla', 'Veg,Non-Veg' ),( 113, 'Hyatt', 'Pune', 'Veg,Non-Veg' ),( 114, 'Belmond', 'Raigad', 'Veg' ),( 115, 'Rosewood Hotels & Resorts', 'Lonavla', 'Non-Veg' ),( 116, 'Ritz-Carlton Hotel', 'Pune', 'Veg' ),( 117, 'Kokani', 'Malwan', 'Veg,Non-Veg' ),( 118, 'The Peninsula Chicago', 'Mumbai', 'Veg' ),( 119, 'Fort Harrison Hotel', 'Pune', 'Non-Veg' ),( 120, 'Kondares', 'Pune', 'Veg,Non-Veg' );
+    
+#insert values Records from 101 to 107 as by mistakely mysql was cancel so its values are missed so copy and paste it manually
+
+select *from restaurant;
+
+
+                                                        #Cutomer Table Query and Insertion of Records
+
+
+CREATE TABLE Customers (
+    Cus_id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    Address VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Age int NOT NULL,
+    UNIQUE (email)
+);
+
+
+
+
+insert into Customers values(1, 'Aditya Gawade', 'Wakad,pune', '1111122222', 'adityagawade@gmail.com', 24),(2, 'Ashish Kondare', 'Navale,pune', '2222233333', 'ashishkondare@gmail.com', 30)
+,(3, 'Viraj Walanj', 'Kothrud,pune', '3333344444', 'virajwalanj@gmail.com', 32),(4, 'Akash Chavan', 'Warje,pune', '4444455555', 'akashchavan@gmail.com', 21),(5, 'Sourabh Gawade', 'Wagholi,pune', '5555566666', 'sourabhgawade@gmail.com', 19)
+,(6, 'Manasi Zagade', 'Vimanager,pune', '6666677777', 'manasizagade@gmail.com', 25),(7, 'Pooja Vaddepalli', 'Wagholi,pune', '7777788888', 'poojawadepalli@gmail.com', 30),(8, 'Ashwini Khade', 'Alandi,pune', '8888899999', 'ashwinikhade@gmail.com', 35)
+,(9, 'Ashwini Patil', 'Nigdi,pune', '9999900000', 'ashwinipatil@gmail.com', 55),(10, 'Jitesh Deore', 'Hadapsar,pune', '0000011111', 'jiteshdeore@gmail.com', 33),(11, 'Ram Gore', 'Narhe,pune', '1212121212', 'ramgore@gmail.com', 44)
+,(12, 'Rushikesh Deshmukh', 'SB road,pune', '1313131313', 'rushikesh@gmail.com', 50),(13, 'Rohan Misal', 'Chinchwad,pune', '1414141414', 'rohanmisal@gmail.com', 52),(14, 'Sahil kamble', 'Pimpri,pune', '1515151515', 'sahilkamble@gmail,com', 55)
+,(15, 'Ashutosh Mulay', 'Ravet,pune', '1616161616', 'ashumulay@gmail.com', 58),(16, 'Purvashri khanolkar', 'Nigdi,pune', '1717171717', 'purvikhanolkar@gmail.com', 24),(17, 'Utkarsha Ajgaonker', 'Pashan,pune', '1818181818', 'utkarsha@gmail.com', 36)
+,(18, 'Sakshi Pednekar', 'Wakad,pune', '1919191919', 'sakshipedne@gmail.com', 30),(19, 'Yugandhar Kanekar', 'Warje,pune', '2020020202', 'yugukane@gmail.com', 45),(20, 'Vaibhav Borkar', 'Bavdhan,pune', '2121212121', 'vaibhavborkar@gmail.com', 36);
+
+                                          
+                                                         #Food Table Query and Insertion of Records
+
+
+CREATE TABLE Food (
+         Restaurant_ID INT,
+         Cus_id INT ,
+         food_name VARCHAR(50) NOT NULL,
+	 food_type VARCHAR(50) NOT NULL,
+	FOREIGN KEY (Restaurant_ID) REFERENCES Restaurant(Restaurant_ID), 
+	FOREIGN KEY (Cus_id) REFERENCES Customers(Cus_id));
+
+     insert into Food values(101, 1, 'Chicken Biryani', 'Non-veg'),(102, 2, 'Mutton Thali', 'Non-veg'),
+	                        (103, 3, 'Chicken Thali ', 'Non-veg'),(104, 4, 'Paneer Masala', 'Veg'),
+	                        (105, 5, 'Palak Paneer', 'Veg'),(106, 6, 'Kaju Paneer Masala', 'Veg'),
+				(107, 7, 'Pulav', 'Veg'),(108, 3, 'Tandoori Chicken', 'Non-veg'),
+				(109, 3, 'Afgani Chicken', 'Non-veg'),(110, 3, 'Butter Chicken', 'Non-veg'),
+			 	(111, 3, 'Chicken Seekh Roll', 'Non-veg'),(112, 3, 'Patiala Chicken', 'Non-veg'),
+				(113, 3, 'Handi Chicken', 'Non-veg'),(114, 3, 'Butter Chicken Boneless', 'Non-veg'),
+				(115, 3, 'Chilli Chicken Boneless', 'Non-veg'),(116, 3, 'Chicken Seekh Masala', 'Non-veg'),
+                                (117, 3, 'Shahi Paneer', 'veg'),(118, 3, 'Kadai Paneer', 'veg'),
+			        (119, 3, 'Paneer Tikka', 'veg'),(120, 3, 'Chill Paneer', 'veg');
+
+
+                                              #Orders Table Query and Insertion of Records
+
+
+CREATE TABLE Orders (
+Order_id INT PRIMARY KEY AUTO_INCREMENT,
+Restaurant_ID INT,
+Cus_id INT,
+Date DATE,
+Mobile_No VARCHAR(15),
+Address VARCHAR(20),
+FOREIGN KEY (Restaurant_ID) REFERENCES restaurant(Restaurant_ID),
+FOREIGN KEY (Cus_id) REFERENCES customers(Cus_id)
+);
+
+
+insert into Orders values(201,101,1,'2023-07-02','9846461446','Kothrud,Pune'),(202,102,2,'2023-07-04','7984685548','Baner,Pune'),(203,103,3,'2023-07-03','8994476114','Katraj,Pune'),(204,104,4,'2023-07-04','8949415544','Dhayari,Pune'),(205,105,17,'2023-07-04','8784661252','Hadapsar,Pune'),(206,106,6,'2023-07-05','9485516151','Narhe,Pune'),(207,107,7,'2023-07-06','8811842545','Warje,Pune'),(208,109,7,'2023-07-06','8456169514','Shivane,Pune'),(209,109,8,'2023-07-06','8561189514','Swargate,Pune'),(210,109,12,'2023-07-09','8931455514','Vagholi,Pune'),(211,114,15,'2023-07-10','8446585514','Kothrud,Pune'),(212,115,13,'2023-07-10','7884671514','Hinjawadi,Pune'),(213,111,9,'2023-07-11','8446585514','Kothrud,Pune'),(214,116,15,'2023-07-12','8424645555','Chichwad,Pune'),(215,116,11,'2023-07-13','7549111564','Deccan,Pune'),(216,114,14,'2023-07-14','9984561545','GokhaleNagar,Pune'),(217,110,17,'2023-07-15','9940184611','Karvenagar,Pune'),(218,119,15,'2023-07-15','748666551','SadashivPeth,Pune'),(219,110,16,'2023-07-15','8446585514','Kothrud,Pune'),(220,114,19,'2023-07-16','9664421885','Kothrud,Pune');
+
+
+
+						#food_order Table Query and Insertion of Records
+
+
+
+create table Food_Order(Cus_id int, 
+			Order_id int, 
+			phone int, 
+			Address varchar(40) NOT NULL,
+			FOREIGN KEY (Cus_id) REFERENCES customers(Cus_id),
+			FOREIGN KEY (Order_id) REFERENCES orders(Order_id));
+
+
+insert into food_order values(1, 201, 11111, 'Hadapsar'), (2, 202, 11212, 'Katraj'), (3, 203, 11452, 'Katraj'), (4, 204, 98712, 'Kondhwa'), (5, 205, 11212, 'Katraj'), (6, 206, 12312, 'Wagholi'), (7, 207, 13252, 'ShriramChowk'), (8, 208, 76712, 'Kondhwa'), (9, 209, 14542, 'Hadapsar'), (10, 210, 11212, 'Katraj'), (11, 211,  984646146, 'Bibewadi'), (12, 212, 788467154, 'ShriramChowk'), (13, 219, 76712, 'Magarpatta'), (14, 214, 842464555, 'Sangvi'), (15, 215, 345345, 'Hadapsar'), (16, 216,  984646146, 'Bibewadi'), (17, 217, 994018411, 'KamlaNagar'), (18, 218, 748666551, 'Magarpatta'), (19, 219, 844658514, 'Sangvi'), (20, 220, 966442185, 'Kothrud'), (8, 208,  984646146, 'SomwarPeth'), (5, 205, 994018411, 'KamlaNagar'), (1, 201, 748666551, 'Amanora'), (12, 212, 844658514, 'Sangvi'), (14, 214, 966442185, 'Kothrud'), (10, 210,  984646146, 'Ramwadi'), (9, 209, 994018411, 'KamlaNagar'), (4, 204, 748666551, 'Magarpatta'), (6, 206, 844658514, 'Hinjewadi'), (19, 219, 966442185, 'Kothrud'), (3, 203,  984646146, 'BudhwarPeth'), (18, 218, 994018411, 'KamlaNagar'), (9, 209, 748666551, 'Ravet'), (18, 218, 844658518, 'Sangvi'), (20, 220, 966442185, 'Kothrud'), (5, 205,  984646146, 'Ramwadi'), (1, 201, 994018411, 'DangeChowk'), (8, 208, 748666551, 'Baner'), (6, 206, 844658514, 'Hinjewadi'), (19, 219, 966442185, 'Kothrud');
+
+
+
+
+						#Menu Table Query and Insertion of Records
+
+
+create table Menu(M_id int PRIMARY KEY,
+		 Name varchar(40) NOT NULL, 
+		Rate int NOT NULL);
+
+insert into Menu values(901, 'Rice,Noodles', 50), (902, 'Paneer,Roti', 80), (903, 'Chicken,Roti', 100), (904, 'Mutton,Roti', 150), (905, 'Veggie,Roti', 50), (906, 'Biryani', 140), (907, 'Kebab', 100), (908, 'MuttonRaan', 900), (909, 'ChickenRaan', 650), (910, 'VegBiryani', 80), (911, 'PaneerTikka', 90), (912, 'ChickenTikka', 140), (913, 'MuttonTikka', 190), (914, 'FishTikka', 50), (915, 'VeggieTikka', 60), (916, 'PaneerBiryani', 150), (917, 'KebabBiryani', 190), (918, 'MuttonBiryani', 250), (919, 'ChickenBiryani', 150), (920, 'VegKoftaBiryani', 150), (921, 'IceCream', 20), (922, 'GulabJam', 40), (923, 'Shrikhand', 40), (924, 'WaterBottle', 20), (925, 'ColdDrinkBottle', 50);
+
+
+
+
+						#Delivery Table Query and Insertion of Records
+
+
+create table Delivery(Restaurant_ID int NOT NULL, 
+			Cus_id int NOT NULL, 
+			OnlinePayment char(5) NOT NULL, 
+			DeliveryBoy_Name char(10),
+			FOREIGN KEY (Restaurant_id) REFERENCES restaurant(Restaurant_id),
+			FOREIGN KEY (Cus_id) REFERENCES customers(Cus_id));
+
+
+insert into Delivery values(101, 1, 'Yes', 'Ashish'), (105, 5, 'Yes', 'Rohan'), (111, 11, 'No', 'Kamlesh'), (118, 18, 'Yes', 'Ashish'), (107, 7, 'No', 'Viraj'), (103, 3, 'Yes', 'Ashish'), (103, 3, 'Yes', 'Jani'), (104, 4, 'No', 'Anna'), (114, 14, 'No', 'Aniket'), (106, 6, 'No', 'Ajay'), (119, 19, 'Yes', 'Babu'), (105, 5, 'Yes', 'Rohan'), (111, 11, 'No', 'Kamlesh'), (118, 18, 'Yes', 'Ashish'), (107, 7, 'No', 'Viraj'), (103, 3, 'Yes', 'Ashish'), (102, 2, 'Yes', 'Pillya'), (104, 4, 'Yes', 'Rathi'), (108, 8, 'Yes', 'Pooja'), (109, 9, 'No', 'Rani'), (110, 10, 'No', 'Shivu'), (120, 20, 'Yes', 'RohanY'), (119, 19, 'Yes', 'Ramesh'), (113, 13, 'No', 'Ashu'), (117, 17, 'Yes', 'VirajA'), (111, 11, 'Yes', 'Anju');
+
+
+
+
+						#Bill Table Query and Insertion of Records
+
+
+create table Bill(M_id int NOT NULL, 
+		Cus_id int NOT NULL, 
+		B_Amount int NOT NULL, 
+		Payment_Mode char(15) NOT NULL,
+		FOREIGN KEY (Cus_id) REFERENCES customers(Cus_id),
+                FOREIGN KEY (M_id) REFERENCES menu(M_id));
+
+
+insert into BIll values(901, 1, 1500, 'Cash'), (903, 3, 2500, 'Cash'), (906, 6, 500, 'UPI'), (909, 9, 1350, 'DebitCard'), (902, 2, 1620, 'Cash'), (904, 4, 1820, 'UPI'), (905, 5, 1230, 'DebitCard'), (907, 7, 430, 'Cash'), (909, 9, 1000, 'UPI'), (908, 8, 1800, 'Cash'), (910, 10, 1500, 'Cash'), (920, 20, 3500, 'Cash'), (916, 16, 800, 'UPI'), (914, 14, 1850, 'DebitCard'), (912, 12, 1920, 'Cash'), (911, 11, 4720, 'UPI'), (913, 13, 1230, 'DebitCard'), (915, 15, 930, 'Cash'), (917, 17, 5000, 'UPI'), (918, 18, 1100, 'Cash'), (915, 15, 1500, 'Cash'), (903, 3, 2900, 'Cash'), (906, 6, 5000, 'UPI'), (909, 9, 1950, 'DebitCard'), (902, 2, 1645, 'UPI'), (904, 4, 1850, 'UPI'), (905, 5, 1250, 'DebitCard'), (907, 7, 4430, 'Cash'), (909, 9, 5000, 'Cash'), (908, 8, 1700, 'Cash'), (910, 10, 1900, 'DebitCard'), (920, 20, 3890, 'Cash'), (916, 16, 8000, 'UPI'), (914, 14, 1848, 'DebitCard'), (912, 12, 1928, 'Cash'), (911, 11, 4728, 'UPI'), (913, 13, 1830, 'DebitCard'), (915, 15, 9300, 'Cash'), (917, 17, 5005, 'UPI'), (918, 18, 7100, 'Cash'), (915, 15, 1700, 'UPI');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
